@@ -4,17 +4,18 @@
 把学习的网址和经验分享给大家
 把关于powershell  parameter 所有变量以及方法看了一遍，终于摸透了parameter的门路
 
-一贴搞懂所有parameter方法
-首先最简单的parameter 是这样
-powershell 代码讲究的是严谨以及简洁，如何在参数方面下手，使得自己的代码更加严谨，简洁
+## 一贴搞懂所有parameter方法
 
+powershell 代码讲究的是严谨以及简洁，如何在参数方面下手，使得自己的代码更加严谨，简洁
+这种parameter是最基本的parameter 没有其他功能和限制，后续如果想要增强自己的parameter就可以增加许多功能或者方法，使得自己的parameter增加功能或者帮助自己的脚本功能
+```
 param (
 $testparameter
 )
 
-)*[/md]
+````
 
-这种parameter是最基本的parameter 没有其他功能和限制，后续如果想要增强自己的parameter就可以增加许多功能或者方法，使得自己的parameter增加功能或者帮助自己的脚本功能
+
 
 方法一：
 param[parameter( )]
@@ -46,7 +47,7 @@ param[parameter[paramtersetname]]定义parameter的组，定义一个paramter组
 举个例子:
 
 
-
+```
 [CmdletBinding()]
 param (
     [Parameter()]
@@ -61,10 +62,12 @@ function test1 {
     )
    
 }
+```
 这种情况下我们只能使用[cmdletbingding]的parmeter的时候
 我们从上面给这个function传输parameter呢？
 
 简单的方法：用第一个parameter然后在代码里面写function的表达式
+```
 [CmdletBinding()]
 param (
     [Parameter()]
@@ -201,9 +204,11 @@ function test3 {
         test3 { test3 -value $value}
     }
 
-
+```
 
 #simplified parameters
+
+```
 
 
 if we using to pass the parameter user have to remeber a lots of param when calling
@@ -382,8 +387,7 @@ switch ($type) {
 
 
 
-
-
+```
 
 
 
@@ -397,7 +401,7 @@ switch ($type) {
 应该把脚本改成powershell module 这样我们既可以在powershell里面直接输入各种方法 还可以简化代码
 
 
-[md]```
+```
 
 
 function find-place {
@@ -539,7 +543,7 @@ function remove-place {
    
 }
 
-```[/md]
+```
 
 
 4.use [validataset]
@@ -550,7 +554,8 @@ function remove-place {
 2.https://learn.microsoft.com/en-u ... set%20of%20possible,matches%20an%20element%20in%20the%20supplied%20element%20set.
 3.https://stackoverflow.com/questi ... l/67358119#67358119
 
-使用
+使用:
+```
 function find-place {
    [CmdletBinding()]
    param (
@@ -588,12 +593,13 @@ function find-place {
    )
    
 }
+```
 5.using parameter completer
 自动补全大家都爱，powershell的自动输入可以运用到自己的脚本或模组里
 相关链接：
 
 使用
-[md]```
+```
 
 function MyArgumentCompleter{
     param ( $commandName,
@@ -655,7 +661,7 @@ function find-place {
    )
    
 }
-```[/md]
+```
 
 
 
@@ -669,7 +675,7 @@ function find-place {
 only use when values are  related and it is not to much values to add
 
 
-[md]```
+```
 function find-place {
 [CmdletBinding()]
 param (
@@ -708,7 +714,10 @@ param (
 )
    
 }
-```[/md]
+```
+
+
+
 
 
 
