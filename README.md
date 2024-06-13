@@ -943,3 +943,6 @@ switch ($pscmdlet.parametersetname) {
 &#128073;相关书籍 https://nostarch.com/powershellsysadmins
 &#128073;QQ:3468387572
 &#128073;完整脚本 https://github.com/CN-CODEGOD/minecraft-GPS
+
+
+高级parameter：
