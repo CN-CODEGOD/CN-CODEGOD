@@ -14,14 +14,10 @@ we want to explore all the unvisted neighbor of 0 and add them to the Q which is
 so 0 have no more unvisted neighbor
 
 and we move on ,9 is next up to the Q ,so we add all 9's unvisted neighbor to the Q
+
 SO that is 10 and 8
-![image](https://github.com/CN-CODEGOD/CN-CODEGOD/assets/166476136/770098f0-1e3b-4486-9c14-c15187489b6e)
 
-and we move on to the next node in our  Q which is 7 ,SO we add all 7 unvisted neighbor to the Q, SO we try to vist node 11 but node 11 is already in the Q ,SO we skip it, we add 6 in the Q  and 3 to the Q ,this process goes on and on untill we run out of Q
+and we move on to the next node in our  Q which is 7 ,SO we add all 7 unvisted neighbor to the Q, SO we try to vist node 11 but node 11 is already in the Q ,SO we skip it, we add 6 in the Q  and 3 to the Q ,this process goes on and on 
+![动画](https://github.com/CN-CODEGOD/CN-CODEGOD/assets/166476136/98efad22-7315-4873-a4d1-241a36815ef8)
 
-## ALL posible BFS
-
-in above case , the BFS isn't recall all posible path 
-
-e.
-7
+untill we run out of Q
